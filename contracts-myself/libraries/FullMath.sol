@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.0 <0.8.0;
 
+/// @title 包含 512 位数学函数
+/// @notice 支持在中间值发生溢出的情况下执行乘法和除法运算而不丢失精度
+/// @dev 处理“虚幻溢出”，即允许在中间结果超过 256 位时进行乘法和除法运算
 library FullMath {
   /**
    * 以完全精度计算floor(a * b / denominator).
