@@ -8,6 +8,7 @@ interface IUniswapV3PoolState {
    * @return tick 该池当前tick
    * @return observationIndex 最后一个写入的预言机观测值的索引
    * @return observationCardinality 池中当前存储的最大观测值
+   * @return observationCardinalityNext
    * @return feeProtocol 池中两个代币的协议费用
    * @return unlocked 该池当前是否允许重入
    */
@@ -19,6 +20,7 @@ interface IUniswapV3PoolState {
       int24 tick,
       uint16 observationIndex,
       uint16 observationCardinality,
+      uint16 observationCardinalityNext,
       uint8 feeProtocol,
       bool unlocked
     );

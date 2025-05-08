@@ -10,8 +10,8 @@ interface IUniswapV3PoolEvents {
     int24 indexed tickLower,
     int24 indexed tickUpper,
     uint128 amount,
-    uint128 amount0,
-    uint128 amount1
+    uint256 amount0,
+    uint256 amount1
   );
 
   event Collect(
@@ -58,5 +58,5 @@ interface IUniswapV3PoolEvents {
 
   event SetFeeProtocol(uint8 feeProtocol0Old, uint8 feeProtocol1Old, uint8 feeProtocol0New, uint8 feeProtocol1New);
 
-  event CoolectProtocol(address indexed sender, address indexed recipient, uint128 amount0, uint128 amount1);
+  event CollectProtocol(address indexed sender, address indexed recipient, uint128 amount0, uint128 amount1);
 }

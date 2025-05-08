@@ -57,7 +57,7 @@ interface IUniswapV3Factory {
   /// @param fee 池的目标费用
   /// @dev tokenA 和 tokenB 可按任意顺序传入：token0/token1 或 token1/token0。tickSpacing 从费用中获取。如果池已存在、费用无效或代币参数无效，则调用会回退。
   /// @return pool 新创建池的地址
-  function createdPool(
+  function createPool(
     address tokenA,
     address tokenB,
     uint24 fee
